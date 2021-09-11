@@ -38,22 +38,3 @@ def _get_category_request(test):
     ch = requests.get(api_url, data='', headers=headers)
     return ch
 
-
-def _assert_parent_ID(parent_id):
-    request = _get_category_request(parent_id)
-    status = request.status_code
-    assert status == 200
-
-    # Assert if user can create offer on parent category.
-    json_request = json.loads(request.text)
-    leaf = jsonpath.jsonpath(json_request, f'leaf')
-    assert leaf[0] is False
-
-    # Assert if name is not null.
-    name = jsonpath.jsonpath(json_request, f'name')
-    assert name[0] is not None or name != ''
-
-    # Assert if parent category does not has parent ID.
-    parent = jsonpath.jsonpath(json_request, f'parent')
-    assert parent[0] is None
-

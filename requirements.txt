@@ -1,3 +1,5 @@
 selenium
 requests
 pytest
+json
+jsonpath

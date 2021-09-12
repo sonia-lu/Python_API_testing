@@ -9,10 +9,10 @@ Table of content:
 <a name="introduction"></a>
 ## Introduction
 
-`This repository was created for recriutment purpose.`
+`This repository was created for recriutment purposes.`
 
 For this automation I used:
-- python
+- Python
 - Pytest
 - Selenium
 
@@ -35,11 +35,9 @@ Before running automated tests it's necessary to install Python, Python modules.
 
     ```console
     python -m ensurepip --upgrade
-    pip install selenium
-    pip install requests
-    pip install pytest
+    pip install -r requirements.txt
     ```
-1. Generate yor token by updating`api_allegrp.php` with your `CLIENT_ID` and `CLIENT_SECRET`
+1. Generate your token by updating`api_allegrp.php` with your `CLIENT_ID` and `CLIENT_SECRET`
 and run this file 
    ```console
     php api_allegrp.php

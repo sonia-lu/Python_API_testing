@@ -37,12 +37,13 @@ Before running automated tests it's necessary to install Python, Python modules.
     python -m ensurepip --upgrade
     pip install -r requirements.txt
     ```
-1. Generate your token by updating`api_allegrp.php` with your `CLIENT_ID` and `CLIENT_SECRET`
-and run this file 
+1. Generate your token by using  `get_token.py` file. But first insert your `CLIENT_ID` and `CLIENT_SECRET` into
+   this file.
    ```console
-    php api_allegrp.php
+    python3 get_token.py
    ```
-   and then copy your token and paste in all files starting  with `test_`
+   and wait for config.json  to be created
+
 
 <a name="instructions"></a>
 ##Instructions
@@ -53,11 +54,9 @@ To run tests you should open `cmd` window or console in your IDE in path Python_
 pytest -v
 
 # running specific test file
-pytest test_get_id_category_positive.py -v
+pytest test_get_id_category_positive.py -s
 
-# running specific test in test file
-pytest 
+# running specific test function
+pytest -k test_first_child_categories_id_error
 ```
 
-<a name="other"></a>
-##Other

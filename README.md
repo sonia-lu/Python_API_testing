@@ -37,7 +37,7 @@ Before running automated tests it's necessary to install Python, Python modules.
     python -m ensurepip --upgrade
     pip install -r requirements.txt
     ```
-1. Generate your token by using  `get_token.py` file. But first insert your `CLIENT_ID` and `CLIENT_SECRET` into
+1. Generate your token by using  `tests/get_token.py` file. But first insert your `CLIENT_ID` and `CLIENT_SECRET` into
    this file.
    ```console
     python3 get_token.py
